@@ -1,0 +1,101 @@
+/* Esto es un comentario */
+
+
+
+/*Los hijos de tr*/
+tr:nth-child(odd){
+    background-color: #fa146e;
+    color: yellow;
+}
+tr:nth-child(even){
+    background-color: #0fc430;
+    color: yellow;
+}
+
+thead tr th{
+    background-color: black;
+    color:white;
+
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding : 90px 20px 0;
+    background-color: whitesmoke;
+
+}
+.header {
+    position: fixed;
+    background-color: #0fc430;
+    top: 0;
+    left:0;
+    height: 90px;
+    width: 100%;
+}
+.nav{
+    display: flex ;
+    justify-content: space-between;
+    margin: 0 auto;
+
+
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    transition: 0.5s;
+    
+}
+.nav-menu-link:hover{
+   background-color: #024070; 
+   border-radius: 14px ;  
+       
+   
+}
+.nav-menu{
+    display: flex ;
+    list-style: none;
+    margin-right: 40px;
+}
+.nav-menu-iten{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+}
+
+aside{
+    position: fixed;
+    background-color:bisque;
+    top: 90px;
+    left:0;
+    bottom: 20px;
+    width: 20%;
+}
+section {
+    overflow-y: scroll;
+    position: fixed;
+    background-color:aquamarine;
+    top: 90px;
+    left:20%;
+    bottom:20px;
+    width: 80%;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    background-color:black;
+    color: white;
+    left:0;
+    bottom:0;
+    height:20px;
+    width: 100%;
+}
