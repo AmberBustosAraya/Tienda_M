@@ -1,118 +1,158 @@
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+      xmlns:th="http://www.thymeleaf.org">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>TechShop</title>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+
     </head>
     <body>
-        <header th:replace="~{layout/plantilla :: header}"></header>
-
+        <header th:replace="~{layout/plantilla :: header}"/>
         <div class="row row-cols-3 mt-4">
             <div class="card">
                 <div class="card-header text-center">
                     <h5>[[#{reporte.usuarios}]]</h5>
                 </div>
                 <div class="card-body">
-                    <a th:href="@{/reportes/usuarios?tipo=vPdf}"
-                       class="btn btn-primary">
+                    <a th:href="@{/reportes/usuarios?tipo=vPdf}" class="btn btn-primary">
                         <i class="fas fa-eye"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/usuarios?tipo=Pdf}"
-                       class="btn btn-success">
+                    <a th:href="@{/reportes/usuarios?tipo=Pdf}" class="btn btn-success">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/usuarios?tipo=Xls}"
-                       class="btn btn-warning">
+                    <a th:href="@{/reportes/usuarios?tipo=Xls}" class="btn btn-warning">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-excel"></i>
                     </a>
-                    <a th:href="@{/reportes/usuarios?tipo=Csv}"
-                       class="btn btn-danger">
+                    <a th:href="@{/reportes/usuarios?tipo=Csv}" class="btn btn-danger">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-csv"></i>
                     </a>
                 </div>
+
             </div>
-            
+
             <div class="card">
                 <div class="card-header text-center">
                     <h5>[[#{reporte.ventas}]]</h5>
                 </div>
                 <div class="card-body">
-                    <a th:href="@{/reportes/ventas?tipo=vPdf}"
-                       class="btn btn-primary">
+                    <a th:href="@{/reportes/ventas?tipo=vPdf}" class="btn btn-primary">
                         <i class="fas fa-eye"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas?tipo=Pdf}"
-                       class="btn btn-success">
+                    <a th:href="@{/reportes/ventas?tipo=Pdf}" class="btn btn-success">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas?tipo=Xls}"
-                       class="btn btn-warning">
+                    <a th:href="@{/reportes/ventas?tipo=Xls}" class="btn btn-warning">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-excel"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas?tipo=Csv}"
-                       class="btn btn-danger">
+                    <a th:href="@{/reportes/ventas?tipo=Csv}" class="btn btn-danger">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-csv"></i>
                     </a>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="card-header text-center">
                     <h5>[[#{reporte.ventas.totales}]]</h5>
                 </div>
                 <div class="card-body">
-                    
-                    <div class="row">
+                    <div clas="row ">
                         <div class="mb-3">
-                            <label for="fechaIni">Fecha Inicial</label>
-                            <input type="date" class="form-control"
-                                   name="fechaIni"
-                                   th:value="${fechaInicio}"
-                                   required="true"/>
+                            <label for="fechaInicio">Fecha Inicio</label>
+                            <input type="date" clas="form.control" name="fechaInicio" th:value="${fechaInicio}"required="true"/>
                         </div>
                         <div class="mb-3">
                             <label for="fechaFin">Fecha Final</label>
-                            <input type="date" class="form-control"
-                                   name="fechaFin"
-                                   th:value="${fechaFin}"
-                                   required="true"/>
+                            <input type="date" clas="form.control" name="fechaFin" th:value="${fechaFin}"required="true"/>
                         </div>
                     </div>
-                    
-                    <a th:href="@{/reportes/ventas.totales?tipo=vPdf}"
+                    <a th:href="@{/reportes/ventas/totales?tipo=vPdf}" class="btn btn-primary">
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a th:href="@{/reportes/ventas/totales?tipo=Pdf}" class="btn btn-success">
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a th:href="@{/reportes/ventas/totales?tipo=Xls}" class="btn btn-warning">
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-file-excel"></i>
+                    </a>
+                    <a th:href="@{/reportes/ventas/totales?tipo=Csv}" class="btn btn-danger">
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-file-csv"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>[[#{reporte.productos}]]</h5>
+                </div>
+                <div class="card-body">
+                    <a th:href="@{/reportes/productos?tipo=vPdf}"
                        class="btn btn-primary">
                         <i class="fas fa-eye"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas.totales?tipo=Pdf}"
+                    <a th:href="@{/reportes/productos?tipo=Pdf}"
                        class="btn btn-success">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-pdf"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas.totales?tipo=Xls}"
+                    <a th:href="@{/reportes/productos?tipo=Xls}"
                        class="btn btn-warning">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-excel"></i>
                     </a>
-                    <a th:href="@{/reportes/ventas.totales?tipo=Csv}"
+                    <a th:href="@{/reportes/productos?tipo=Csv}"
                        class="btn btn-danger">
                         <i class="fas fa-download"></i>
                         <i class="fas fa-file-csv"></i>
                     </a>
                 </div>
             </div>
+            --><!-- le colocamos un string donde obtendra los datos ingresados en caso de ser activo, inactivo o todos segun el estado -->
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5>[[#{reporte.categorias}]]</h5>
+                </div>
+                <div class="card-body">
+                    <form method="GET" action="/reportes/categorias">
+                        <div class="row">
+                            <div class="mb-3">
+                                <label for="Tipo_estado">Tipo de estado</label>
+                                <input type="text" class="form-control" name="Tipo_estado" required="true"/>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="tipo" value="vPdf">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-file-pdf"></i>
+                        </button>
+                        <button type="submit" class="btn btn-success" name="tipo" value="Pdf">
+                            <i class="fas fa-download"></i>
+                            <i class="fas fa-file-pdf"></i>
+                        </button>
+                        <button type="submit" class="btn btn-warning" name="tipo" value="Xls">
+                            <i class="fas fa-download"></i>
+                            <i class="fas fa-file-excel"></i>
+                        </button>
+                        <button type="submit" class="btn btn-danger" name="tipo" value="Csv">
+                            <i class="fas fa-download"></i>
+                            <i class="fas fa-file-csv"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-        
-
         <footer th:replace="~{layout/plantilla :: footer}"></footer>
     </body>
 </html>
